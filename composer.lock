@@ -992,12 +992,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/italia/spid-symfony-bundle.git",
-                "reference": "31f1036c2b6d2ed4cb7dbe1b87c45f614ce8783c"
+                "reference": "bb08e7432dd814908abf08ece1cdcdc006dad443"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/italia/spid-symfony-bundle/zipball/31f1036c2b6d2ed4cb7dbe1b87c45f614ce8783c",
-                "reference": "31f1036c2b6d2ed4cb7dbe1b87c45f614ce8783c",
+                "url": "https://api.github.com/repos/italia/spid-symfony-bundle/zipball/bb08e7432dd814908abf08ece1cdcdc006dad443",
+                "reference": "bb08e7432dd814908abf08ece1cdcdc006dad443",
                 "shasum": ""
             },
             "require": {
@@ -1048,7 +1048,7 @@
                 "source": "https://github.com/italia/spid-symfony-bundle/tree/master",
                 "issues": "https://github.com/italia/spid-symfony-bundle/issues"
             },
-            "time": "2018-08-29T06:42:52+00:00"
+            "time": "2018-08-29T15:27:23+00:00"
         },
         {
             "name": "jdorn/sql-formatter",
