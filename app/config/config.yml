@@ -69,3 +69,17 @@ swiftmailer:
 sensio_framework_extra:
    router:
         annotations: false
+
+spid_symfony:
+    sp_entityid: 'http://some.site.it'
+    sp_key_file: '%kernel.root_dir%/../example/sp.key'
+    sp_cert_file: '%kernel.root_dir%/../example/sp.crt'
+    sp_singlelogoutservice: 'http://some.site.it/slo'
+    sp_org_name: 'dev-system'
+    sp_attributeconsumingservice:
+        - ["name", "familyName", "fiscalNumber", "email"]
+        - ["name", "familyName", "fiscalNumber", "email", "spidCode"]
+    sp_assertionconsumerservice:
+        - 'http://some.site.it/acs'
+    sp_org_display_name: 'Sistema di Sviluppo'
+    idp_metadata_folder: '%kernel.root_dir%/../example/idp_metadata'
