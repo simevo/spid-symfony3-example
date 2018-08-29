@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "80a80953d9ace73103f546f59946a193",
+    "content-hash": "40228f6137cdb1b2884a6dd67e72de47",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -941,6 +941,116 @@
             "time": "2018-02-13T18:05:56+00:00"
         },
         {
+            "name": "italia/spid-php-lib",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/italia/spid-php-lib.git",
+                "reference": "b8fb960a39f8febf92fc9ea32df6e637fbbdccb7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/italia/spid-php-lib/zipball/b8fb960a39f8febf92fc9ea32df6e637fbbdccb7",
+                "reference": "b8fb960a39f8febf92fc9ea32df6e637fbbdccb7",
+                "shasum": ""
+            },
+            "require": {
+                "robrichards/xmlseclibs": "^3.0"
+            },
+            "require-dev": {
+                "squizlabs/php_codesniffer": "^3.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Italia\\Spid\\": "src/"
+                }
+            },
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Lorenzo Cattaneo",
+                    "email": "development@lorenzocattaneo.com"
+                },
+                {
+                    "name": "Paolo Greppi",
+                    "email": "paolo.greppi@libpf.com"
+                }
+            ],
+            "description": "PHP package for SPID authentication",
+            "support": {
+                "source": "https://github.com/italia/spid-php-lib/tree/master",
+                "issues": "https://github.com/italia/spid-php-lib/issues"
+            },
+            "time": "2018-08-21T10:03:44+00:00"
+        },
+        {
+            "name": "italia/spid-symfony-bundle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/italia/spid-symfony-bundle.git",
+                "reference": "31f1036c2b6d2ed4cb7dbe1b87c45f614ce8783c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/italia/spid-symfony-bundle/zipball/31f1036c2b6d2ed4cb7dbe1b87c45f614ce8783c",
+                "reference": "31f1036c2b6d2ed4cb7dbe1b87c45f614ce8783c",
+                "shasum": ""
+            },
+            "require": {
+                "italia/spid-php-lib": "dev-master#b8fb960a39f8febf92fc9ea32df6e637fbbdccb7 as 1.0",
+                "php": ">=7.0",
+                "symfony/console": "~2.7|~3.0",
+                "symfony/framework-bundle": "~2.7|~3.0",
+                "symfony/process": "~2.7|~3.0",
+                "symfony/yaml": "~2.7|~3.0",
+                "twig/twig": "^1.28.2|^2.0"
+            },
+            "require-dev": {
+                "doctrine/orm": "~2.4",
+                "endouble/symfony3-custom-coding-standard": "^2.10",
+                "phpunit/phpunit": "^6.3",
+                "symfony/doctrine-bridge": "~2.7|~3.0",
+                "symfony/filesystem": "~2.7|~3.0",
+                "symfony/phpunit-bridge": "^3.3",
+                "symfony/symfony": "3.*"
+            },
+            "type": "project",
+            "autoload": {
+                "psr-4": {
+                    "Italia\\SpidSymfonyBundle\\": ""
+                }
+            },
+            "license": [
+                "GPL-3"
+            ],
+            "authors": [
+                {
+                    "name": "Marco Albarelli",
+                    "email": "info@marcoalbarelli.eu"
+                }
+            ],
+            "description": "A Bundle to make Symfony3 capable of using SPID authentication, based on italia/spid-php-lib",
+            "homepage": "https://github.com/italia/spid-symfony-bundle",
+            "keywords": [
+                "idp",
+                "oauth",
+                "saml2",
+                "shibboleth",
+                "sp",
+                "spid",
+                "ws-federation"
+            ],
+            "support": {
+                "source": "https://github.com/italia/spid-symfony-bundle/tree/master",
+                "issues": "https://github.com/italia/spid-symfony-bundle/issues"
+            },
+            "time": "2018-08-29T06:42:52+00:00"
+        },
+        {
             "name": "jdorn/sql-formatter",
             "version": "v1.2.17",
             "source": {
@@ -1355,6 +1465,46 @@
                 "simple-cache"
             ],
             "time": "2017-10-23T01:57:42+00:00"
+        },
+        {
+            "name": "robrichards/xmlseclibs",
+            "version": "3.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/robrichards/xmlseclibs.git",
+                "reference": "d937712f70f93a584eb0299ccd87dc6374003781"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/robrichards/xmlseclibs/zipball/d937712f70f93a584eb0299ccd87dc6374003781",
+                "reference": "d937712f70f93a584eb0299ccd87dc6374003781",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">= 5.4"
+            },
+            "suggest": {
+                "ext-openssl": "OpenSSL extension"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "RobRichards\\XMLSecLibs\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "A PHP library for XML Security",
+            "homepage": "https://github.com/robrichards/xmlseclibs",
+            "keywords": [
+                "security",
+                "signature",
+                "xml",
+                "xmldsig"
+            ],
+            "time": "2017-08-31T09:27:07+00:00"
         },
         {
             "name": "sensio/distribution-bundle",
@@ -2443,15 +2593,14 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
-    "stability-flags": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "italia/spid-symfony-bundle": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
         "php": ">=5.5.9"
     },
-    "platform-dev": [],
-    "platform-overrides": {
-        "php": "5.6"
-    }
+    "platform-dev": []
 }
