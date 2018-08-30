@@ -2,7 +2,7 @@ security:
 
     providers:
         spid_user_provider:
-            id: example
+            id: example_user_provider
 
     firewalls:
         spid:
