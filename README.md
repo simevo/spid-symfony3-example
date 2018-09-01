@@ -48,11 +48,11 @@ make -f ./vendor/italia/spid-php-lib/Makefile
 
   1. Execute the `php bin/console server:start` command
 
-  2. Visit https://localhost:8000/metadata to get the SP (Service Provider) metadata, then copy these over to the IdP and register the SP
+  2. Visit http://localhost:8000/metadata to get the SP (Service Provider) metadata, then copy these over to the IdP and register the SP
 
   3. Browse to the http://localhost:8000/reserved, you should see: `Authentication Required`
 
-  4. Visit https://localhost:8000/ and click `login`
+  4. Visit http://localhost:8000/ and click `login`
 
   5. Browse to the http://localhost:8000/reserved, you should see: `Really reserved stuff here !`
 
