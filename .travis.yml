@@ -1,0 +1,42 @@
+language: php
+
+php:
+  - 7.2
+
+services:
+  - docker
+  
+cache:
+  directories:
+    - $HOME/.composer/cache
+    
+before_script:
+  - composer install --no-interaction
+  - mkdir -p example/idp_metadata
+  - make -f ./vendor/italia/spid-php-lib/Makefile
+  - php vendor/italia/spid-php-lib/bin/download_idp_metadata.php ./example/idp_metadata
+  - sudo mkdir /etc/spid-testenv2
+  - sudo cp ./tests/build/config-testenv2.yaml /etc/spid-testenv2/config.yaml
+  - cat /etc/spid-testenv2/config.yaml
+  - sudo openssl req -x509 -nodes -sha256 -subj '/C=IT' -newkey rsa:2048 -keyout /etc/spid-testenv2/idp.key -out /etc/spid-testenv2/idp.crt
+  - docker create --name spid-testenv2 -p 8088:8088 --restart=always --mount src="/etc/spid-testenv2",target="/app/conf",type=bind italia/spid-testenv2
+  - php bin/console server:start
+  - sudo wget -O /etc/spid-testenv2/sp_metadata.xml http://localhost:8000/metadata
+  - docker start spid-testenv2
+  - wget -O example/idp_metadata/testenv2.xml http://localhost:8088/metadata
+  
+
+script:
+  - vendor/bin/simple-phpunit
+
+after_script:
+  - php bin/console server:stop
+  - docker stop spid-testenv2
+  
+after_success:
+
+after_failure:
+
+notifications:
+  email:
+  - manzolo@libero.it

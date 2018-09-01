@@ -4,3 +4,8 @@ app:
 
 spid_security:
     resource: '@SpidSymfonyBundle/Resources/config/routing/saml_routes.yml'
+
+spid_acs:
+  path: /acs
+  defaults: { _controller: SpidSymfonyBundle:Security:acs }
+  methods: ['GET','POST']
