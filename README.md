@@ -36,7 +36,7 @@ Before using this package, you must:
 
 The last three steps can be performed in an unattended fashion with:
 ```sh
-composer install --no-dev
+composer install
 mkdir -p example/idp_metadata
 make -f ./vendor/italia/spid-php-lib/Makefile
 ./vendor/italia/spid-php-lib/bin/download_idp_metadata.php ./example/idp_metadata
