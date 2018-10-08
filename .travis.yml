@@ -18,7 +18,7 @@ before_install:
 before_script:
   - composer install --no-interaction
   - mkdir -p example/idp_metadata
-  - make -f ./vendor/italia/spid-php-lib/Makefile
+  - make -C example -f ../vendor/italia/spid-php-lib/example/Makefile 
   - php vendor/italia/spid-php-lib/bin/download_idp_metadata.php ./example/idp_metadata
   - sudo mkdir /etc/spid-testenv2
   - sudo cp ./tests/build/config-testenv2.yaml /etc/spid-testenv2/config.yaml
