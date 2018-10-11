@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "5be483f597bace2577330b0262ca384d",
+    "content-hash": "34233cd6d0dd613a51c3b077b51226eb",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -1198,28 +1198,24 @@
         },
         {
             "name": "italia/spid-php-lib",
-            "version": "dev-master",
+            "version": "v0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/italia/spid-php-lib.git",
-                "reference": "9d21678f1d73b61a98f9442cd0dfd062084eb9aa"
+                "reference": "a9b35fbbf5f3d372883e0e83458ba66b02ba015b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/italia/spid-php-lib/zipball/9d21678f1d73b61a98f9442cd0dfd062084eb9aa",
-                "reference": "9d21678f1d73b61a98f9442cd0dfd062084eb9aa",
+                "url": "https://api.github.com/repos/italia/spid-php-lib/zipball/a9b35fbbf5f3d372883e0e83458ba66b02ba015b",
+                "reference": "a9b35fbbf5f3d372883e0e83458ba66b02ba015b",
                 "shasum": ""
             },
-            "archive": {
-                "exclude": [
-                    "/example",
-                    "/tests"
-                ]
-            },
             "require": {
+                "php": "^7.0",
                 "robrichards/xmlseclibs": "^3.0"
             },
             "require-dev": {
+                "phpunit/phpunit": "^6.5",
                 "squizlabs/php_codesniffer": "^3.3"
             },
             "type": "library",
@@ -1228,6 +1224,7 @@
                     "Italia\\Spid\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -1242,33 +1239,29 @@
                 }
             ],
             "description": "PHP package for SPID authentication",
-            "support": {
-                "source": "https://github.com/italia/spid-php-lib/tree/master",
-                "issues": "https://github.com/italia/spid-php-lib/issues"
-            },
-            "time": "2018-08-30T23:33:27+00:00"
+            "time": "2018-10-04T16:25:36+00:00"
         },
         {
             "name": "italia/spid-symfony-bundle",
-            "version": "dev-master",
+            "version": "v0.1.3-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/italia/spid-symfony-bundle.git",
-                "reference": "6bfa5a5b2fd81850e8243d35cd45a74fae2fed21"
+                "reference": "bbc6cbc86bfd367836618fc9d82513b76df5180c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/italia/spid-symfony-bundle/zipball/6bfa5a5b2fd81850e8243d35cd45a74fae2fed21",
-                "reference": "6bfa5a5b2fd81850e8243d35cd45a74fae2fed21",
+                "url": "https://api.github.com/repos/italia/spid-symfony-bundle/zipball/bbc6cbc86bfd367836618fc9d82513b76df5180c",
+                "reference": "bbc6cbc86bfd367836618fc9d82513b76df5180c",
                 "shasum": ""
             },
             "require": {
-                "italia/spid-php-lib": "dev-master#b8fb960a39f8febf92fc9ea32df6e637fbbdccb7 as 1.0",
+                "italia/spid-php-lib": "^0.10.0",
                 "php": ">=7.0",
-                "symfony/console": "~2.7|~3.0",
-                "symfony/framework-bundle": "~2.7|~3.0",
-                "symfony/process": "~2.7|~3.0",
-                "symfony/yaml": "~2.7|~3.0",
+                "symfony/console": "~2.7|~3.0|~4.0",
+                "symfony/framework-bundle": "~2.7|~3.0|~4.0",
+                "symfony/process": "~2.7|~3.0|~4.0",
+                "symfony/yaml": "~2.7|~3.0|~4.0",
                 "twig/twig": "^1.28.2|^2.0"
             },
             "require-dev": {
@@ -1286,8 +1279,9 @@
                     "Italia\\SpidSymfonyBundle\\": ""
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "GPL-3"
+                "BSD-3-Clause"
             ],
             "authors": [
                 {
@@ -1298,19 +1292,15 @@
             "description": "A Bundle to make Symfony3 capable of using SPID authentication, based on italia/spid-php-lib",
             "homepage": "https://github.com/italia/spid-symfony-bundle",
             "keywords": [
+                "SAML2",
+                "SPiD",
                 "idp",
                 "oauth",
-                "saml2",
                 "shibboleth",
                 "sp",
-                "spid",
                 "ws-federation"
             ],
-            "support": {
-                "source": "https://github.com/italia/spid-symfony-bundle/tree/master",
-                "issues": "https://github.com/italia/spid-symfony-bundle/issues"
-            },
-            "time": "2018-09-04T08:29:04+00:00"
+            "time": "2018-10-11T16:21:22+00:00"
         },
         {
             "name": "jdorn/sql-formatter",
@@ -1726,23 +1716,21 @@
         },
         {
             "name": "robrichards/xmlseclibs",
-            "version": "3.0.1",
+            "version": "3.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/robrichards/xmlseclibs.git",
-                "reference": "d937712f70f93a584eb0299ccd87dc6374003781"
+                "reference": "1f4de0c0d121922aafd8c62c2a9f5e528830cf38"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/robrichards/xmlseclibs/zipball/d937712f70f93a584eb0299ccd87dc6374003781",
-                "reference": "d937712f70f93a584eb0299ccd87dc6374003781",
+                "url": "https://api.github.com/repos/robrichards/xmlseclibs/zipball/1f4de0c0d121922aafd8c62c2a9f5e528830cf38",
+                "reference": "1f4de0c0d121922aafd8c62c2a9f5e528830cf38",
                 "shasum": ""
             },
             "require": {
+                "ext-openssl": "*",
                 "php": ">= 5.4"
-            },
-            "suggest": {
-                "ext-openssl": "OpenSSL extension"
             },
             "type": "library",
             "autoload": {
@@ -1762,7 +1750,7 @@
                 "xml",
                 "xmldsig"
             ],
-            "time": "2017-08-31T09:27:07+00:00"
+            "time": "2018-09-27T13:24:13+00:00"
         },
         {
             "name": "sensio/distribution-bundle",
@@ -1818,16 +1806,16 @@
         },
         {
             "name": "sensio/framework-extra-bundle",
-            "version": "v5.2.0",
+            "version": "v5.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/SensioFrameworkExtraBundle.git",
-                "reference": "50e8b7292425957b8fd66887504430c89bcbd83c"
+                "reference": "535b56b7b0325e87b15b9c57bd3631ae2a0b9f16"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/SensioFrameworkExtraBundle/zipball/50e8b7292425957b8fd66887504430c89bcbd83c",
-                "reference": "50e8b7292425957b8fd66887504430c89bcbd83c",
+                "url": "https://api.github.com/repos/sensiolabs/SensioFrameworkExtraBundle/zipball/535b56b7b0325e87b15b9c57bd3631ae2a0b9f16",
+                "reference": "535b56b7b0325e87b15b9c57bd3631ae2a0b9f16",
                 "shasum": ""
             },
             "require": {
@@ -1885,7 +1873,7 @@
                 "annotations",
                 "controllers"
             ],
-            "time": "2018-05-12T09:37:42+00:00"
+            "time": "2018-09-30T05:16:57+00:00"
         },
         {
             "name": "sensiolabs/security-checker",
@@ -2508,16 +2496,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v3.4.15",
+            "version": "v3.4.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "5bb5c2d4b0d5cf10672015b68519a199e6ac27c1"
+                "reference": "de239d25e0bb3be451a17b627705a5970c6c59e6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/5bb5c2d4b0d5cf10672015b68519a199e6ac27c1",
-                "reference": "5bb5c2d4b0d5cf10672015b68519a199e6ac27c1",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/de239d25e0bb3be451a17b627705a5970c6c59e6",
+                "reference": "de239d25e0bb3be451a17b627705a5970c6c59e6",
                 "shasum": ""
             },
             "require": {
@@ -2659,7 +2647,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2018-08-28T06:06:28+00:00"
+            "time": "2018-10-03T12:03:55+00:00"
         },
         {
             "name": "twig/twig",
@@ -3241,16 +3229,16 @@
         },
         {
             "name": "symfony/phpunit-bridge",
-            "version": "v3.4.15",
+            "version": "v3.4.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/phpunit-bridge.git",
-                "reference": "f4fde1ede82c7ca2a4f06cf48521a185b26c0fed"
+                "reference": "76e013a98031356604e5a730c9eb22713dc4dda4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/f4fde1ede82c7ca2a4f06cf48521a185b26c0fed",
-                "reference": "f4fde1ede82c7ca2a4f06cf48521a185b26c0fed",
+                "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/76e013a98031356604e5a730c9eb22713dc4dda4",
+                "reference": "76e013a98031356604e5a730c9eb22713dc4dda4",
                 "shasum": ""
             },
             "require": {
@@ -3303,14 +3291,12 @@
             ],
             "description": "Symfony PHPUnit Bridge",
             "homepage": "https://symfony.com",
-            "time": "2018-08-27T15:17:06+00:00"
+            "time": "2018-10-02T12:28:39+00:00"
         }
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "italia/spid-symfony-bundle": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
