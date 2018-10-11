@@ -1,3 +1,10 @@
+<img src="https://github.com/italia/spid-graphics/blob/master/spid-logos/spid-logo-b-lb.png" alt="SPID" data-canonical-src="https://github.com/italia/spid-graphics/blob/master/spid-logos/spid-logo-b-lb.png" width="500" height="98" />
+
+[![Join the #spid-perl channel](https://img.shields.io/badge/Slack%20channel-%23spid--perl-blue.svg?logo=slack)](https://developersitalia.slack.com/messages/C7ESTMQDQ)
+[![Get invited](https://slack.developers.italia.it/badge.svg)](https://slack.developers.italia.it/)
+[![SPID on forum.italia.it](https://img.shields.io/badge/Forum-SPID-blue.svg)](https://forum.italia.it/c/spid)
+[![Build Status](https://travis-ci.com/simevo/spid-symfony3-example.svg?branch=master)](https://travis-ci.com/simevo/spid-symfony3-example)
+
 # spid-symfony3-example
 
 Example Symfony3 project based on [spid-symfony-bundle](https://github.com/italia/spid-symfony-bundle) to demonstrate how to integrate SPID login.
@@ -13,6 +20,8 @@ php symfony.phar new spid-symfony3-example 3.4
 ## Getting Started
 
 Tested on: amd64 Debian 9.5 (stretch, current stable) with PHP 7.0.
+
+Supports PHP 7.0, 7.1 and 7.2.
 
 ### Prerequisites
 
@@ -77,8 +86,38 @@ It is advised to install a browser plugin to trace SAML messages:
 
 In addition, you can use the [SAML Developer Tools](https://www.samltool.com/online_tools.php) provided by onelogin to understand what is going on
 
+## Testing
+
+### Unit tests
+
+Launch unit tests with PHPunit:
+```
+./vendor/bin/phpunit --stderr --testdox tests
+```
+
+### Linting
+
+This project complies with the [PSR-2: Coding Style Guide](https://www.php-fig.org/psr/psr-2/).
+
+Lint the code with:
+```
+./vendor/bin/phpcs --standard=PSR2 xxx.php
+```
+
+## Contributing
+
+For your contributions please use the [git-flow workflow](https://danielkummer.github.io/git-flow-cheatsheet/).
+
+## See also
+
+* [SPID page](https://developers.italia.it/it/spid) on Developers Italia
+
+## Authors
+
+Andrea Manzi (Comune di Firenze) and Paolo Greppi (simevo s.r.l.)
+
 ## License
 
-Copyright (c) 2018, simevo s.r.l.
+Copyright (c) 2018, The respective authors
 
 License: BSD 3-Clause, see [LICENSE](LICENSE) file.
