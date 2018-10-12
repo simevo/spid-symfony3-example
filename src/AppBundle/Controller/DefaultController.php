@@ -9,6 +9,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class DefaultController extends Controller
 {
+
     /**
      * @Route("/", name="homepage")
      */
@@ -16,7 +17,7 @@ class DefaultController extends Controller
     {
         // replace this example code with whatever you need
         return $this->render('default/index.html.twig', [
-            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
+                    'base_dir' => realpath($this->getParameter('kernel.project_dir')) . DIRECTORY_SEPARATOR,
         ]);
     }
 
@@ -26,10 +27,10 @@ class DefaultController extends Controller
     public function reservedAction(Request $request)
     {
         return $this->render('reserved/index.html.twig', [
-            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
+                    'base_dir' => realpath($this->getParameter('kernel.project_dir')) . DIRECTORY_SEPARATOR,
         ]);
     }
-    
+
     /**
      * @Route("/acs", name="acs")
      */
@@ -44,11 +45,7 @@ class DefaultController extends Controller
             }
             return new Response($out);
         }
-        throw new \Exception('Unauthenticated');
-
-
-        return $this->render('acs/index.html.twig', [
-                    'base_dir' => realpath($this->getParameter('kernel.project_dir')) . DIRECTORY_SEPARATOR,
-        ]);
+        return new Response("Unauthenticated", 401);
     }
+
 }

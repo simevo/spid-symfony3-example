@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cab3d1147f05d3015233644b9b7935fa",
+    "content-hash": "bc410e48c294bd97bba0ac27797ed29d",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -568,16 +568,16 @@
         },
         {
             "name": "italia/spid-php-lib",
-            "version": "v0.10",
+            "version": "v0.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/italia/spid-php-lib.git",
-                "reference": "a9b35fbbf5f3d372883e0e83458ba66b02ba015b"
+                "reference": "168dfc4863c318f7a3f5396709fff1bc90ac6845"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/italia/spid-php-lib/zipball/a9b35fbbf5f3d372883e0e83458ba66b02ba015b",
-                "reference": "a9b35fbbf5f3d372883e0e83458ba66b02ba015b",
+                "url": "https://api.github.com/repos/italia/spid-php-lib/zipball/168dfc4863c318f7a3f5396709fff1bc90ac6845",
+                "reference": "168dfc4863c318f7a3f5396709fff1bc90ac6845",
                 "shasum": ""
             },
             "require": {
@@ -609,24 +609,24 @@
                 }
             ],
             "description": "PHP package for SPID authentication",
-            "time": "2018-10-04T16:25:36+00:00"
+            "time": "2018-10-11T12:56:09+00:00"
         },
         {
             "name": "italia/spid-symfony-bundle",
-            "version": "v0.1.3-beta",
+            "version": "v0.1.4-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/italia/spid-symfony-bundle.git",
-                "reference": "bbc6cbc86bfd367836618fc9d82513b76df5180c"
+                "reference": "6184bdff880a55390ace5d4e164652b223e612df"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/italia/spid-symfony-bundle/zipball/bbc6cbc86bfd367836618fc9d82513b76df5180c",
-                "reference": "bbc6cbc86bfd367836618fc9d82513b76df5180c",
+                "url": "https://api.github.com/repos/italia/spid-symfony-bundle/zipball/6184bdff880a55390ace5d4e164652b223e612df",
+                "reference": "6184bdff880a55390ace5d4e164652b223e612df",
                 "shasum": ""
             },
             "require": {
-                "italia/spid-php-lib": "^0.10.0",
+                "italia/spid-php-lib": "^0.12.0",
                 "php": ">=7.0",
                 "symfony/console": "~2.7|~3.0|~4.0",
                 "symfony/framework-bundle": "~2.7|~3.0|~4.0",
@@ -641,9 +641,9 @@
                 "symfony/doctrine-bridge": "~2.7|~3.0",
                 "symfony/filesystem": "~2.7|~3.0",
                 "symfony/phpunit-bridge": "^3.3",
-                "symfony/symfony": "3.*"
+                "symfony/symfony": "3.4.*"
             },
-            "type": "project",
+            "type": "bundle",
             "autoload": {
                 "psr-4": {
                     "Italia\\SpidSymfonyBundle\\": ""
@@ -662,15 +662,13 @@
             "description": "A Bundle to make Symfony3 capable of using SPID authentication, based on italia/spid-php-lib",
             "homepage": "https://github.com/italia/spid-symfony-bundle",
             "keywords": [
-                "SAML2",
                 "SPiD",
                 "idp",
                 "oauth",
-                "shibboleth",
                 "sp",
                 "ws-federation"
             ],
-            "time": "2018-10-11T16:21:22+00:00"
+            "time": "2018-10-12T07:38:32+00:00"
         },
         {
             "name": "monolog/monolog",

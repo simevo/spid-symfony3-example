@@ -35,8 +35,13 @@ class DefaultControllerTest extends WebTestCase
         // start the session
         $session->start();
 
-        $session->visit('http://localhost:8000/reserved');
         $page = $session->getPage();
+        $session->visit('http://localhost:8000/acs');
+        $this->assertTrue($session->getStatusCode() == 401);
+        $noauthacscheck = (strpos($page->getHtml(), "Unauthenticated") > 0);
+        $this->assertTrue($noauthacscheck);
+
+        $session->visit('http://localhost:8000/reserved');
         $noauthcheck = (strpos($page->getHtml(), "Authentication Required") > 0);
         $this->assertTrue($noauthcheck);
 
