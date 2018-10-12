@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "05c4280ba063cd9c52ed9157bc8e0025",
+    "content-hash": "cab3d1147f05d3015233644b9b7935fa",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -2615,9 +2615,11 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "dev",
-    "stability-flags": [],
-    "prefer-stable": true,
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "italia/spid-symfony-bundle": 10
+    },
+    "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
         "php": ">=5.5.9"

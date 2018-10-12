@@ -1,6 +1,6 @@
 {
     "name": "simevo/spid-symfony3-example",
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "license": "proprietary",
     "type": "project",
     "autoload": {
